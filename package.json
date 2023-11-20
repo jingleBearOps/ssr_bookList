@@ -1,4 +1,5 @@
 {
+  "homepage": "http://jingleBearOps.github.io/ssr_bookList",
   "name": "bookstore",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "predeploy": "npm run build",
+    "depoy": "gb-pages -d build",
     "lint": "next lint"
   },
   "dependencies": {
@@ -24,6 +27,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "gh-pages": "^6.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
