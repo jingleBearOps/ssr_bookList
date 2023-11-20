@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "depoy": "gb-pages -d build",
+    "deploy": "gb-pages -d build",
     "lint": "next lint"
   },
   "dependencies": {
