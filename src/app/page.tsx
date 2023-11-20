@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useAppDispatch } from "@/store/store";
 import { deleteBook } from "@/store/book.slice";
 import AddBook from "@/components/AddBook";
+import EditBook from "@/components/EditBook";
 
 
 export default function Home() {
@@ -24,6 +25,16 @@ export default function Home() {
     <main className="min-h-screen p-24" >
       <h2 className={'text-2xl font-bold text-center'}>Book Store</h2>
       <AddBook />
+      {editedBook && <EditBook
+        book={editedBook}
+
+        onEditCancel={() => {
+          setEditedBook(undefined);
+        }}
+        onEditSubmit={() => {
+          setEditedBook(undefined);
+        }}
+      />}
       <BooksList onClickBook={handleClickBookItem} onClickDelete={handleCLickDeleteBook} />
     </main>
   )
