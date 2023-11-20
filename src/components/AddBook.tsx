@@ -40,7 +40,7 @@ export default function AddBook() {
                 }}
                 className={'p-3 text-white bg-orange-600 rounded hover:bg-orange-400'}>Add Book</button>
             <Modal
-
+                ariaHideApp={false}
                 isOpen={isModalOpen}
                 onRequestClose={() => setIsModalOpen(false)}
                 contentLabel="Add Book Modal"
@@ -55,7 +55,7 @@ export default function AddBook() {
                                     required
                                     id="name"
                                     type="text"
-                                    className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring focus:border-blue-500"
+                                    className="border border-gray-300 p-2 rounded-md focus:outline-none focus:ring focus:border-blue-500  ;"
                                     value={newBook.name}
                                     onChange={(e) => setNewBook({ ...newBook, name: e.target.value })}
                                 />
